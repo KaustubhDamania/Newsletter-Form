@@ -1,0 +1,27 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div>
+        <form id="myForm">
+            <img src="illustration.svg" class="illustration" />
+            <h3 class="heading">Join the newsletter for latest courses!</h3>
+            <h3 class="heading subtitle">You'll receive it every Monday!</h3>
+            <div class="input-group" id="input-group">
+                <input type="text" placeholder="example@example.com" id="email-input">
+                <button id="submit" class="btn"><img src="send.svg" /></button>
+                <span id="success" class="success none">
+                    <div class="success-message">
+                        SUBSCRIBED
+                        <img class="tick" src="tick.svg">
+                    </div>
+                </span>
+            </div>
+            <small id="error">Invalid email address!</small>
+            <small class="footer">Illustration credits: <a href="https://undraw.co">undraw.co</a></small>
+        </form>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

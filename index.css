@@ -1,0 +1,181 @@
+/*
+
+PART 1:
+
+You've been ordered to improve your company's newsletter form. 
+You can design it however you want, but the manager wants the button to
+animate both on the :hover and the :active state.
+
+1. Redesign the page (e.g. colors, positions, sizing, spacing)
+2. Improve the button's hover effect
+3. Improve thee button's click effect
+
+SKILLS:
+color, background, margin, padding, border-radius, 
+CSS pseudo selectors (:active, :hover), transform
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;800&display=swap');
+
+body {
+    /* margin: 0; */
+    /* background: #ac8d0b; */
+    background: #3494E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+font-family: BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;    
+}
+
+form {
+    background: #fffffe;
+    margin: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.illustration {
+    height: 100px;
+    width: 100px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.heading {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.subtitle{
+    font-weight: 300;
+}
+
+.input-group {
+    display: inline-flex;
+    margin-top: 40px;
+    height: inherit;
+    border-radius: 10px 0px 0px 10px;
+    width: 300px;
+    height: 35px;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: #28a745;
+    border-radius: 0px 10px 10px 0px;
+    padding: 10px;
+}
+
+
+.btn:focus{
+    outline: none;
+}
+
+input {
+    border-radius: 10px 0px 0px 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    width: inherit;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-right: none;
+}
+
+.none{
+    display: none !important;
+}
+
+.success {
+    animation: loader;
+    /* animation-direction: reverse; */
+    animation-duration: 1s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    height: inherit;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    /* padding-top: 5px; */
+    /* padding-bottom: 5px; */
+    background: #28a745;
+    width: 300px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+.success-message{
+    animation: appear;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes reverse-load{
+    from{
+        flex-direction: row-reverse;
+    }
+    to{
+        flex-direction: row;
+    }
+}
+
+
+@keyframes loader{
+    from{
+        width: 20%;
+    }
+    to{
+        width: 300px;
+    }
+}
+
+.tick{
+    margin-left: 5px;
+}
+
+#error{
+    visibility: hidden;
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.footer{
+    color: #999;
+    margin-bottom: 5px;
+}
+
+a{
+    color: inherit;
+}
